@@ -8,6 +8,8 @@
 </head>
 <body>
     <script>
+
+        // objs da aula 1
         const pessoa = {
             nome: "Naum",
             idade: 17,
@@ -16,7 +18,23 @@
             }
         };
 
+        // objs da aula 2
+        const livro = {
+            titulo: "Como se Tornar um Cristão Inútil",
+            autor: "Rodrigo Bibo",
+            nPaginas: 176,
+            pLidas: 89,
+            statusLer: function() {
+                if (pLidas < nPaginas) {
+                    console.log(pLidas + " foram lidas, ainda faltam " + (nPaginas-pLidas))
+                } else {
+                    console.log("Livro já Lido!")
+                }
+            }
+        }
+
         pessoa.saudacao(); // Chama o método saudacao do objeto pessoa
+        livro.statusLer()
     </script>
     
 </body>
