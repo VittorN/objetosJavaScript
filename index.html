@@ -23,18 +23,60 @@
             titulo: "Como se Tornar um Cristão Inútil",
             autor: "Rodrigo Bibo",
             nPaginas: 176,
-            pLidas: 89,
+            pLidas: 174,
             statusLer: function() {
-                if (pLidas < nPaginas) {
-                    console.log(pLidas + " foram lidas, ainda faltam " + (nPaginas-pLidas))
+                if (this.pLidas < this.nPaginas) {
+                    console.log(this.pLidas + " página foram lidas, ainda faltam " + (this.nPaginas - this.pLidas) + " páginas!")
                 } else {
                     console.log("Livro já Lido!")
+                }
+            }
+        }
+        const contaBancaria = {
+            titular: "Vitor Naum",
+            cpf: "000.000.000-00",
+            saldo: 2000.00,
+            sacar: function(valor) { 
+                this.saldo -= valor; 
+            }
+        };
+        const guerreiro = {
+            nome: "Thorin",
+            nivel: 5,
+            vida: 100,
+            atacar: function() {
+                console.log(guerreiro.nome + " atacou!")
+            }
+        };
+        const playlist = {
+        nome: "Foco no Código",
+        criador: "naum",
+        musicas: ["Lo-Fi Beats", "Synthwave Drive", "Ambient Rain"],
+        tocar: function(n) {
+            console.log("Tocando: " + this.musicas[n])
+        }
+        };
+        const lista = {
+            conteudo: "Logaritimo",
+            nAtividades: 30,
+            nPaginas: 3,
+            aFeitas: 16,
+            statusLista: function() {
+                if (this.aFeitas < this.nAtividades) {
+                    console.log(this.aFeitas + " atividades foram feitas, ainda faltam " + (this.nAtividades - this.aFeitas) + " atividades!")
+                } else {
+                    console.log("Lista feita!")
                 }
             }
         }
 
         pessoa.saudacao(); // Chama o método saudacao do objeto pessoa
         livro.statusLer()
+        contaBancaria.sacar(500.00)
+        console.log("Saldo: " + contaBancaria.saldo)
+        guerreiro.atacar()
+        playlist.tocar(2)
+        lista.statusLista()
     </script>
     
 </body>
